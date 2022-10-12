@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-products',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { 
+    this.fetchData()
+  }
+
+
+  fetchData=()=>{
+    this.myapi.viewProducts().subscribe(
+      (data)=>{
+        this.productView=data
+      }
+    )
+  }
 
 productView:any=[]
 
