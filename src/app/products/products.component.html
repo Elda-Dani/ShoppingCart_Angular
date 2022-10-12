@@ -7,15 +7,15 @@
 <div class="row g-4">
     <div *ngFor="let i of productView.products" class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
 
-        <div class="card" style="width: 18rem;">
-            <img src="{{i.images}}" class="card-img-top" alt="...">
+        <div class="card">
+            <img height="300px" src="{{i.thumbnail}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{i.title}}</h5>
               <h5 class="card-title">{{i.price}}</h5>
               <h5 class="card-title">{{i.brand}}</h5>
-              <h5 class="card-title">{{i.category}}</h5>
-              <p class="card-text">{{i.description}}</p>
-              <a href="{{i.thumbnail}}" class="btn btn-primary">Go somewhere</a>
+             
+              <p class="card-text">{{i.category}}</p>
+              <a href="{{i.images}}" class="btn btn-primary">Details</a>
             </div>
           </div>
 
